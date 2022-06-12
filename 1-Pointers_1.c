@@ -29,11 +29,11 @@ return 0;
 
 
 /*
-int *p2----->[ mem block ] //declaration time allocation
+int *p2----->[ mem block ] //Memory allocation at the time of decleration
 
 
 *p2 = &v2 --------->[       v2      ]-------->[ ?????????? ] 
                       0xc85424200                   p2
-Address of v2 is assigned to *p2 will produce error of not intializing pointer p2 and assiging value to an unknown pointing address will create error
+Address of v2 is assigned to *p2 will produce error of not intializing pointer p2 and assiging value to an unknown pointing address will create error "Segmentation Fault"
 
 */
