@@ -10,7 +10,7 @@ int *ptr;
     int arr[i][j];
     ptr = arr;
     printf("Enter The Elements of the matrix\n");
-    for(ptr ; ptr <= &arr[i-1][j-1] ; ptr++)
+    for(ptr ; ptr <= &arr[i-1][j-1] ; ptr++) //Here ptr represent ptr = &arr[0][0] and; &arr[i-1][j-1] hrere is used to check wheather <--Look carefully u will understand
     {
         printf("Enter the element for index %d %d\n", i,j);
         scanf("%d", ptr);
