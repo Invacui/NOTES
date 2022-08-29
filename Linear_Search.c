@@ -39,12 +39,12 @@ int LS(int key,int A[],int Len )        //DEFINITION OF LS FN
      while(x <= Len)        //LS SEARCHING THE WHOLE INDEX OF ARRAY 
         {
             x++;            //IMP TO PUT IT ON THE TOP
-            if(key == A[x])
+            if(key == A[x]) //CON 1:WHEN VALUE IS MATCHED
             {return x;}
-            else if(x == Len && key != A[x])
+            else if(x == Len && key != A[x])    //CON 1:WHEN IT REACHED THE END OF INDEX
             {return -1;}
             else
-            {continue;}
+            {continue;}     //CON 1:WHEN VALUE IS NOT MATCHED
             
         }
         
