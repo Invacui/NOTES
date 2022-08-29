@@ -18,7 +18,7 @@ int *ptr;
     }
     
     printf("Working");
-    for(ptr = &arr[0][0]; ptr <= &arr[i-1][j-1] ; ptr++)
+    for(ptr = &arr[0][0]; ptr <= &arr[i-1][j-1] ; ptr++) //It is necessary here to assign the value of ptr else it will consider the value implicitly
     {
         printf("\nPrinted Elements are \n");
         printf("%d", *ptr);
