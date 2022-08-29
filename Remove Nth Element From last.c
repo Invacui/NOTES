@@ -3,11 +3,12 @@
 #include <stdlib.h>
  typedef struct ListNode NO;
  
-struct ListNode {
+struct ListNode 
+ {
       int data;
       struct ListNode *link;
  };
- 
+/*---------------------------------------------------------PRINTING LL---------------------------------------------------------*/ 
 struct ListNode* printdata(NO *head)
 {
     if(head == NULL){
@@ -23,30 +24,32 @@ struct ListNode* printdata(NO *head)
         }
     }
 }
-
-struct ListNode* removeNthFromEnd(struct ListNode* head, int n){
-   int count = 1;
-    NO *ptr = malloc(sizeof(struct ListNode));
+/*---------------------------------------------------------REMOVING Nth NODE FROM LL---------------------------------------------------------*/
+struct ListNode* removeNthFromEnd(struct ListNode* head , int n){
+    int count = 1;                                //BLOCK START  
+    NO *ptr = malloc(sizeof(struct ListNode));    //COUNTING THE LENGTH OF LL
     ptr = head;
     while(ptr != NULL)
     {
         ptr = ptr->link ;
         ++count;
         
-    }
-     struct ListNode *prev = head;
-     struct ListNode *curr = head;
+    }                                             //BLOCK END
+    int sum = count - (n);                        //CALCULATING SUM
     
-   // struct ListNode *temp =malloc(sizeof(struct ListNode));
-   if(n == 1){
-       while(head == NULL)
-       {
-           free(head);
-           head=NULL;
+ if(sum == 1){                                    //BLOCK START
+   if(head == NULL)                               //CALCULATING NTH NODE AND REMOVING IT 
+     {return NULL;}
+       else{
+          NO *temp1 = head;
+           head = head -> link;
+           free(temp1);
+            temp1 =NULL;
        }
-   }
-   
-    int sum = count - (n);
+    }
+       else{
+    struct ListNode *prev = head;
+    struct ListNode *curr = head;
     while(sum != 1){
     prev = curr; 
     curr = curr->link;
@@ -55,7 +58,12 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n){
     prev->link = curr->link;
     free(curr);
     curr->link = NULL;
+   }
+      
+   
+    return head;
 }
+/*---------------------------------------------------------DRIVER BLOCK---------------------------------------------------------*/
 int main() {
 NO *head = (NO*)malloc(sizeof(NO));
 head->data = 45;
@@ -76,9 +84,9 @@ curr = (NO*)malloc(sizeof(NO));
 curr->data = 345;
 curr->link = NULL;
 head->link->link->link->link=curr;
-    int key = 1;
+    int key = 5;
     printdata(head);
-    removeNthFromEnd(head,key);
+    head = removeNthFromEnd(head, key);
     printf("\n\n");
     printdata(head);
     return 0;
