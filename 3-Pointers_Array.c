@@ -27,21 +27,25 @@ int *ptr;
     return 0;
 }
 
-
-/*// Online C compiler to run C program online
-#include <stdio.h>
-
+/*//RUN THIS CODE NIG3ER
+#include <iostream>
+using namespace std;
 int main() {
-    int val[2][2] = { 5, 10, 15};
- 
-    // Declare pointer variable
-    int *ptr;
-    ptr = val;
-    // Assign address of val[0] to ptr.
-    // We can use ptr=&val[0];(both are same)
-   
-    printf("Elements of the arrays are :");
-    printf("%d ", *ptr );
-    
+    // Write C++ code here
+    int a[5][2]={2,3,5,4,8,8,9,45,5,1};
+    int *i = &a[0][0];
+    for(i ; i <= &a[4][1] ;i++)
+    {
+        int *ze = &a[0][0];
+        int cal = {(i - ze )};
+        cout<<"\n"<<i<<"-"<<ze<<"\n";
+        cout<<*i<<"==>"<<i<<" "<<"INDEX==>"<<cal<<"\n";
+    }
+    int arr[5] ={5,21,55,6,8};
+    int *po = &arr[3];
+    int *zeq = &arr[0];
+    int cal = (po-zeq)%4;
+    cout<<"\n"<<po<<" "<<cal<<" "<<*po;
+
     return 0;
 }*/
