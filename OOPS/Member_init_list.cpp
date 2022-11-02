@@ -13,7 +13,7 @@ class framework{
 class Entity{
   private :
   std::string m_name;       //declaration of str var
-  framework E2;             //initializing object of framework entity, its its a Cons it will get auto Invoked;
+  framework E2;             //initializing object of framework entity, its its a Const it will get auto Invoked;
   public:
  
   Entity(const std::string name)            //Par Construct
