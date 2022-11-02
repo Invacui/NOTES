@@ -1,4 +1,4 @@
-// Online C compiler to run C program online
+/// Online C compiler to run C program online
 #include <stdio.h>
 
 int main() {
@@ -15,3 +15,4 @@ int main() {
     return 0;
 }
 /*https://www.geeksforgeeks.org/storage-for-strings-in-c/*/
+/*https://overiq.com/c-programming-101/array-of-pointers-to-strings-in-c/*/
