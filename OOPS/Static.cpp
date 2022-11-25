@@ -38,5 +38,6 @@ int main() {
 class A obj;
 //A::A1;                //we can also assign value here but it'd be good to assign it Globaly;
 obj.func();
+A::func();              //does the same thing 
     return 0;
 }
