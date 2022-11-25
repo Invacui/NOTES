@@ -42,7 +42,7 @@ class Entity {
         this->y = y;
         this->z = z;
     }
-    Entity(Entity& e){
+    Entity(Entity *e){
         x = e->x;
         y = e->y;
         z = e->z;
@@ -53,12 +53,11 @@ class Entity {
     
 };
 int main() {
-    Entity *e = new Entity(5,46,2);
+    Entity *e = new Entity(5,46,2); //Creating Object using new 
    
-    Entity f(e);
-    e.print();
+    Entity f(*e);                   //Passing object as args to copyconstructors;
+    e->print();
     
     
     return 0;
 }
-Footer
