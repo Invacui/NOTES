@@ -61,3 +61,34 @@ int main() {
     
     return 0;
 }
+/*=====================================================================================================================================================*/
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class const_pro{
+    private:
+    int c;
+    int k;
+    public:
+    const_pro(int c, int k){
+        this->c = c;
+        this->k = k;
+    }
+    const_pro(const_pro *o1)
+    {
+     this->c = o1->c;
+     this->k = o1->k;
+    }
+    void print(){
+        std::cout<<c<<" "<<k<<"\n";
+    }
+    
+};
+int main() {
+   const_pro *o1;
+   o1 = new const_pro(5,55);
+   const_pro o2(o1);
+   o2.print();
+   
+   return 0;
+}
